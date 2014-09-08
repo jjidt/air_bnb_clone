@@ -8,7 +8,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params)
+    @listing = current_user.listings.new(listing_params)
     if @listing.save
       respond_to do |format|
         format.html { redirect_to listings_url }
