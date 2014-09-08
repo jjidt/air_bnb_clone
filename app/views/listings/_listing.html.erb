@@ -1,5 +1,5 @@
 <p><%= listing.description %></p>
-<p><%= listing.price %></p>
+<p>$<%= listing.price %></p>
 <p><%= listing.location %></p>
 <p>Listing is
   <% if listing.available %>
@@ -8,3 +8,4 @@
     <span> unavailable </span>
   <% end %>
 </p>
+<%= link_to "edit listing", edit_listing_path(listing) %>

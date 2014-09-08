@@ -17,6 +17,21 @@ class ListingsController < ApplicationController
     end
   end
 
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+
+  def update
+    @listing = Listing.find(params[:id])
+    if @listing.update(listing_params)
+      flash[:notice] = "Listing updated successfully"
+      redirect_to listings_path
+    else
+      flash[:alert] = "Incomplete information, please try again"
+      redirect_to :back
+    end
+  end
+
 private
 
   def listing_params
