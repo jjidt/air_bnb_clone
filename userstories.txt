@@ -1,0 +1,8 @@
+user should be able to create account
+user should be able to login to account
+user should be able to put their pants up for rent
+user should be able to put up a photo of their pants
+user should be able to view places for rent
+user should be able to leave comments on a listing
+user should be able view availability of pants
+
