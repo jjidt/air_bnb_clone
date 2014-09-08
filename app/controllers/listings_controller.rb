@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    @listings = Listing.all.order("listings.created_at desc")
   end
 
   def new
@@ -10,10 +10,11 @@ class ListingsController < ApplicationController
   def create
     @listing = current_user.listings.new(listing_params)
     if @listing.save
-      respond_to do |format|
-        format.html { redirect_to listings_url }
-        format.js
-      end
+      flash[:notice] = "Listing saved"
+      redirect_to listings_path
+    else
+      flash[:alert] = "Incomplete information, please try again"
+      redirect_to listings_path
     end
   end
 
@@ -35,6 +36,6 @@ class ListingsController < ApplicationController
 private
 
   def listing_params
-    params.require(:listing).permit(:description, :location, :price, :available)
+    params.require(:listing).permit(:description, :location, :price, :available, :photo)
   end
 end

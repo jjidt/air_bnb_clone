@@ -47,7 +47,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
     cliver (0.3.2)
+    cocaine (0.5.4)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -89,6 +93,11 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.5.9)
     orm_adapter (0.5.0)
+    paperclip (4.2.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.1)
     poltergeist (1.5.1)
       capybara (~> 2.1)
@@ -187,6 +196,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   nokogiri (= 1.5.9)
+  paperclip (~> 4.2)
   pg
   poltergeist
   quiet_assets
