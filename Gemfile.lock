@@ -47,6 +47,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (0.3.22)
+      capybara (>= 1.0, < 3)
+      colored
+      launchy
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cliver (0.3.2)
@@ -60,6 +64,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    colored (1.2)
     debug_inspector (0.0.2)
     devise (3.3.0)
       bcrypt (~> 3.0)
@@ -197,6 +202,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   capybara
+  capybara-screenshot
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails (~> 4.0)
