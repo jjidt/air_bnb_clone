@@ -1,1 +1,7 @@
-<h3><%= comment.content %> - <%= comment.rating %> stars</h3>
+<h3><%= comment.content %></h3>
+<% comment.rating.to_i.times do %>
+  <p class="glyphicon glyphicon-star">
+<% end %>
+<% (5-comment.rating.to_i).times do %>
+  <p class="glyphicon glyphicon-star-empty">
+<% end %>
