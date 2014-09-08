@@ -1,0 +1,15 @@
+<h1><%= @listing.description %></h1>
+
+<%= image_tag @listing.photo.url(:medium) %>
+
+<h2>Comments</h2>
+
+<%= link_to "Leave a Comment", new_listing_comment_path(@listing), id: "add-comment", remote: true %>
+
+<div class="comments">
+
+<%= render(@comments) %>
+
+</div>
+
+

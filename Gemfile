@@ -15,6 +15,7 @@ gem 'textacular', '~> 3.0'
 # use older version of nokogiri due to issues on VMs
 gem 'nokogiri', '1.5.9'
 gem "paperclip", "~> 4.2"
+gem 'remotipart'
 
 group :development do
   gem 'better_errors'

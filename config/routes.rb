@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root :to => 'listings#index'
 
-  resources :listings
+  resources :listings do
+    resources :comments
+  end
 end

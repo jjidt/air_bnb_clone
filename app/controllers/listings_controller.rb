@@ -11,7 +11,10 @@ class ListingsController < ApplicationController
     @listing = current_user.listings.new(listing_params)
     if @listing.save
       flash[:notice] = "Listing saved"
-      redirect_to listings_path
+      respond_to do |format|
+        format.html { redirect_to listings_url }
+        format.js
+      end
     else
       flash[:alert] = "Incomplete information, please try again"
       redirect_to listings_path
@@ -31,6 +34,11 @@ class ListingsController < ApplicationController
       flash[:alert] = "Incomplete information, please try again"
       redirect_to :back
     end
+  end
+
+  def show
+    @listing = Listing.find(params[:id])
+    @comments = @listing.comments.order("comments.created_at desc")
   end
 
 private

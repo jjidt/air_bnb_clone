@@ -1,0 +1,7 @@
+<%= form_for [@listing, @comment], remote: true do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating, min: 1, max: 5 %>
+  <%= f.submit %>
+<% end %>
