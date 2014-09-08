@@ -1,0 +1,11 @@
+<%= form_for @listing, remote: true do |f| %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <%= f.label :available %>
+  <%= f.text_field :available %>
+  <%= f.submit %>
+<% end %>

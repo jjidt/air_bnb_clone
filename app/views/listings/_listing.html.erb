@@ -1,0 +1,10 @@
+<p><%= listing.description %></p>
+<p><%= listing.price %></p>
+<p><%= listing.location %></p>
+<p>Listing is
+  <% if listing.available %>
+    <span> available </span>
+  <% else %>
+    <span> unavailable </span>
+  <% end %>
+</p>
