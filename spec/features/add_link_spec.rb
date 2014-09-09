@@ -1,12 +1,9 @@
 require 'rails_helper'
+require 'login_helper'
 
 describe 'adding a listing' do
   before do
-    user = FactoryGirl.create(:user)
-    visit '/users/login'
-    fill_in 'user_email', with: user.email
-    fill_in 'user_password', with: user.password
-    click_button ''
+    login_user
   end
 
   it 'opens a form for creating a listing' do
